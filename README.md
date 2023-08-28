@@ -102,17 +102,56 @@ Git的存档操作就是在这三个区间完成的，在大概理解了这三�
 - 根目录是你的项目需要git管理的所有的东西，再往外一层git将不会理会    
 - -git是Linux开发者作的，或多或少有一些Linux的影子我这里附带整理了一些基基本的windows和Linux/macOS操作区别。简单说也就是cmd和git bash的指令区别
 ### windows和Linux/macOS操作目录
-|Windows| Linux/macOS|说明 | 
-|:-----------:| :-------------:|:-------------:|
-|cd|cd|切换目录|  
-|cd|pwd|获取当前所在位置|  
-|dir|ls|列出当前所在的文件列表|  
-|mkdir|mkdir|创建新的目录（文件夹）|  
-|无|touch|创建文件|  
-|copy|cp|复制文件|  
-|move|mv|移动文件|  
-|del|rm|删除文件|  
-|**`cls`**|**`clear`**|**`清除上面内容`**|  
+
+<table align="center" border="1" id="t1" style="width:600px;height:200px"  >
+  <tbody align="center" valign="center"  >
+    <tr >
+      <td colspan="3" style="color:red;font-size:17px;">windows和Linux/macOS操作目录</td>
+    </tr>
+    <tr style="font-size:17px;">
+      <td>Windows </td>
+      <td>Linux/macOS </td>
+      <td>说明 </td>
+    </tr>  <tr>
+      <td>cd </td>
+      <td>cd </td>
+      <td>切换目录 </td>
+    </tr>  <tr>
+      <td>cd </td>
+      <td>pwd </td>
+      <td>获取当前所在位置 </td>
+    </tr>  <tr>
+      <td>dir </td>
+      <td>ls </td>
+      <td>列出当前所在的文件列表 </td>
+    </tr>  <tr>
+      <td>mkdir </td>
+      <td>mkdir </td>
+      <td>创建新的目录（文件夹） </td>
+    </tr>  <tr>
+      <td>无 </td>
+      <td>touch </td>
+      <td>创建文件 </td>
+    </tr>  <tr>
+      <td>copy </td>
+      <td>cp </td>
+      <td>复制文件 </td>
+    </tr>  <tr>
+      <td>move </td>
+      <td>mv </td>
+      <td>移动文件 </td>
+    </tr>  <tr>
+      <td>del </td>
+      <td>rm </td>
+      <td>说明 </td>
+    </tr>  <tr style="color:red;">
+      <td>cls </td>
+      <td>clear </td>
+      <td>清除上面内容 </td>
+    </tr>
+  </tbody>
+</table>
+
 
 其中大部分都拿鼠标来的快，但是clear指令可以帮助你在你的git bash很乱的时候清空一下命令行就不用重启git bash了，可以节省很多时间是一个应当掌握的指令。  
 但是如果你要是想在人前显圣的话就可以偷偷练一下之后在假装不经意间用出来。  
@@ -145,18 +184,51 @@ git add --a
 ～(￣▽￣～)(～￣▽￣)～
 - `git add .`与`git add --a`他们并不等价，区别如下  
 
-Git 2.X 版本之前：
-|使用参数| 删除的文件|提交内容 | 
-|:-----------:| :-------------:|:-------------:|
-|--all|可更改|根目录下所有内容|
-|.|不可更改|当前路径下的所有内容|
 
-Git 2.X 版本之后：
-|使用参数| 删除的文件|提交内容 | 
-|:-----------:| :-------------:|:-------------:|
-|--all|可更改|根目录下所有内容|
-|.|可更改|当前路径下的所有内容|
 
+
+<table align="center" border="1" id="t1" style="width:600px;height:150px" >
+  <tbody align="center" valign="center" >
+  <tr>
+    <td colspan="3" style="color:red;font-size:17px;">Git 2.X 版本之前：</td>
+  </tr> <tr style="font-size:17px;">
+    <td>使用参数</td>
+    <td>删除的文件</td>
+    <td>提交内容</td>
+  </tr> <tr>
+    <td>--all</td>
+    <td>可更改</td>
+    <td>根目录下所有内容</td>
+  </tr> <tr>
+    <td>.</td>
+    <td>不可更改</td>
+    <td>当前路径下的所有内容</td>
+  </tr> 
+  </tr>
+  </tbody>
+</table>
+
+
+<table align="center" border="1" id="t1" style="width:600px;height:150px" >
+  <tbody align="center" valign="center" >
+  <tr>
+    <td colspan="3" style="color:red;font-size:17px;">Git 2.X 版本之后：</td>
+  </tr> <tr style="font-size:17px;">
+    <td>使用参数</td>
+    <td>删除的文件</td>
+    <td>提交内容</td>
+  </tr> <tr>
+    <td>--all</td>
+    <td>可更改</td>
+    <td>根目录下所有内容</td>
+  </tr> <tr>
+    <td>.</td>
+    <td>可更改</td>
+    <td>当前路径下的所有内容</td>
+  </tr> 
+  </tr>
+  </tbody>
+</table>
 ### git status （查看文件状态）
 你可以输入git status来查看你文件的状态，以便你来理解，简单介绍一下。  
 在git bash里接着输入：
