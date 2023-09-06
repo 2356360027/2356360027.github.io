@@ -143,7 +143,7 @@ Git的存档操作就是在这三个区间完成的，在大概理解了这三�
     </tr>  <tr>
       <td>del </td>
       <td>rm </td>
-      <td>说明 </td>
+      <td>删除 </td>
     </tr>  <tr style="color:red;">
       <td>cls </td>
       <td>clear </td>
