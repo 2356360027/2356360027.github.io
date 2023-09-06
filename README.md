@@ -1,6 +1,6 @@
 # 2356360027.github.io  
-[Linux基操1](Linux.md)    
-[Linux基操2](https://2356360027.github.io/Linux.md)  
+[Linux基操1](Linux_gpp.md)    
+[Linux基操2](https://2356360027.github.io/Linux_gpp.md)  
 **本页访问次数/Visitor Count:**
 
 <a href="https://count.getloli.com/"><img src="https://count.getloli.com/get/@:2356360027"></a>
