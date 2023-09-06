@@ -1,6 +1,6 @@
----
+
 permalink: /Linux.html
----
+
 # Linux基本指令  
 <html>
     <body>
