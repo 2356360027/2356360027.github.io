@@ -1,5 +1,5 @@
 
-permalink: /Linux.html
+permalink: /Linux_gpp.html
 
 # Linux基本指令  
 <html>
