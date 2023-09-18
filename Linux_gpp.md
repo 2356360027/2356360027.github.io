@@ -45,6 +45,48 @@ g++ hello.o -o hello //基于hello.o目标文件生成可执行文件。
 ``` 
 - 可执行文件的后缀名可以没有，换句话说，就是执行的时候一定要输入全名。
 
+### g++与gcc的区别：  
+首先应当说明的是，g++,gcc是俩个个不同的东西哦。他们俩可以理解为GCC的“子集”。他们的区别如下表：
+
+
+
+<table align="center" border="1" id="t1" style="width:800px;height:300px"  >
+  <tbody align="center" valign="center"  >
+    <tr >
+      <td colspan="5" style="color:red;font-size:17px;">g++，gcc，GCC的区别</td>
+    </tr>
+    <tr>
+      <td>语言</td>
+      <td>说明</td>
+      <td>可编译语言</td>
+      <td style="width:220px">编译区别</td>
+      <td style="width:80px">链接区别</td>
+    </tr>  <tr >
+      <td>GCC</td>
+      <td>编译器集合</td>
+      <td>C、C++、JAVA等 </td>
+      <td> </td>
+      <td> </td>
+    </tr>  <tr>
+      <td>gcc </td>
+      <td>C 编译器 </td>
+      <td>C、C++ </td>
+      <td>分别当作.c和.cpp编译</td>
+      <td>gcc-lstdc++ </td>
+    </tr>  <tr>
+      <td>g++</td>
+      <td>C++编译器 </td>
+      <td>C、C++ </td>
+      <td>统一当作.cpp文件编译，但g++ 会自动调用 gcc，故二者近似等价。</td>
+      <td>g++ </td>
+    </tr>  
+    </tr>
+  </tbody>
+</table>
+
+
+在编译阶段，g++会调用gcc，所以对于c++代码，两者是等价的，但是因为gcc命令不能自动和C++程序使用的库联接，所以通常用g++来完成链接，为了统一起见，干脆编译/链接统统用g++了，这就给人一种错觉，好像cpp程序只能用g++似的。
+
 ## 随笔
 
 
