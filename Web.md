@@ -8,7 +8,7 @@
 
 ## 1.如何打开项目
 第一个问题就是大家最关心的问题，话不多说直接上图：
-<img src="jpg/1.1.1.png.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+<img src="jpg/1.1.1.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 <img src="jpg/1.1.2.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 <img src="jpg/1.1.3.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 
@@ -57,9 +57,9 @@ a = Objects.name.equals(usne,null);
 
 ### 4.2 全线爆红
 当我们导入其他人的项目的时候，容易全线爆红，所有的文件都显示错误，这时候我们就该重新配置一下Java的库：
-<img src="jpg/1.4.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
-<img src="jpg/1.5.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
-<img src="jpg/1.6.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+<img src="jpg/1.1.4.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+<img src="jpg/1.1.5.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+<img src="jpg/1.1.6.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 
 ### 4.3  404错误
 请先判断到底是哪个网页打不开，确定之后找之前页面的**转跳语句**。容易出现错误的有：  
