@@ -28,10 +28,16 @@
 
 ....
 
+### 2.3maven
+
 ## 3.小技巧：
 ### 3.1 一键对齐：Ctrl+Shift+F
 <img src="jpg/3.1.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 
+### 3.2 复制实现类类名：
+<img src="jpg/3.2.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+
+### 3.3 一键导包：ctrl+shift+m
 
 ## 4.我遇到的问题
 ### 4.1 String类型的比较
@@ -69,5 +75,22 @@ a = Objects.name.equals(usne,null);
     <img src="jpg/4.1.2.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
     <img src="jpg/4.1.1.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
 2. 跳转语句：
+
+### 4.4   maven无法找到用户里的".m2"文件：
+1. 用注释符：
+```java
+<!--    -->
+```
+注释掉maven里conf文件夹里settings.xml文件里的：
+```java
+<localRepository>`路径`\maven_repository</localRepository>
+```
+如：
+<img src="jpg/4.4.1.png" alt="图片或logo" title="logo" width="600" hight="100" align="center" valign="center" />
+
+2. 在cmd中运行：
+```java
+mvn help:system
+```
 
 内容真正手打，请耐心等待
