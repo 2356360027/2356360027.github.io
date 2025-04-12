@@ -19,6 +19,7 @@
 [3. Web高级开发](Web.md)  
 [4. 嵌入式c++](Linux_gpp.md)  
 [5. Markdown书写规则](Markdown.md)  
+[6.Poetry](poetry.md)
 
 
 
