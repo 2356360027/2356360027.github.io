@@ -18,12 +18,8 @@
 [2. Linux基操](Linux.md)   
 [3. Web高级开发](Web.md)  
 [4. 嵌入式c++](Linux_gpp.md)  
-[5. Markdown书写规则](Markdown.md)  
-<<<<<<< HEAD
+[5. Markdown书写规则](Markdown.md)
 [6. Poetry](poetry.md)
-=======
-[6.Poetry](poetry.md)
->>>>>>> 421ff12a9cbe55021ce5bf90d9452ab2ef475edf
 
 
 
