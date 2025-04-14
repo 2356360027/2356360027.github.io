@@ -124,23 +124,26 @@ Using virtualenv: C:\Users\xxp\AppData\Local\pypoetry\Cache\virtualenvs\poetry-d
 ### 在当前项目下创建虚拟环境
 我们可以使用 poetry config --list 指令来查看 poetry 的几个主要设定
 ```
-X:\poetry-demo>poetry config --list
-cache-dir = "C:\\Users\\xxp\\AppData\\Local\\pypoetry\\Cache"
-experimental.new-installer = true
-experimental.system-git-client = false
+cache-dir = "C:\\Users\\Xiuhuachuitou\\AppData\\Local\\pypoetry\\Cache"
+data-dir = "C:\\Users\\Xiuhuachuitou\\AppData\\Roaming\\pypoetry"
 installer.max-workers = null
-installer.modern-installation = true
 installer.no-binary = null
+installer.only-binary = null
 installer.parallel = true
+installer.re-resolve = true
+keyring.enabled = true
+python.installation-dir = "{data-dir}\\python"  # C:\Users\Xiuhuachuitou\AppData\Roaming\pypoetry\python
+requests.max-retries = 0
+solver.lazy-wheel = true
+system-git-client = false
 virtualenvs.create = true
 virtualenvs.in-project = null
 virtualenvs.options.always-copy = false
 virtualenvs.options.no-pip = false
-virtualenvs.options.no-setuptools = false
 virtualenvs.options.system-site-packages = false
-virtualenvs.path = "C:\\Users\\xxp\\AppData\\Local\\pypoetry\\Cache\\virtualenvs"
-virtualenvs.prefer-active-python = false
+virtualenvs.path = "{cache-dir}\\virtualenvs"  # C:\Users\Xiuhuachuitou\AppData\Local\pypoetry\Cache\virtualenvs
 virtualenvs.prompt = "{project_name}-py{python_version}"
+virtualenvs.use-poetry-python = false
 ```
 - cache-dir：缓存目录
 - experimental.new-installer：是否使用新的安装器
@@ -182,6 +185,8 @@ Using virtualenv: X:\poetry-demo\.venv
 - virtualenvs.in-project = false 时，虚拟环境会创建在 poetry 配置的虚拟环境路径下，并且命名为 项目名-随机数-python版本
 
 ### 启动与退出虚拟环境
+注意：poetry shell 命令在新版本中已被移除，取而代之的是 poetry env activate（推荐）或者安装 shell 插件来恢复 poetry shell 功能。
+
 在项目的根目录下使用 poetry shell 就可以进入到虚拟环境
 ```
 X:\poetry-demo>poetry shell
@@ -205,7 +210,7 @@ poetry 是一个独立的命令行工具，他有自己的指令，需要花费�
 
 
 
-<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -476,7 +481,84 @@ Poetry 的虚拟环境，默认使用的是 Python 官方的 PyPI 镜像源，�
 poetry source add tsinghua https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+附赠poetry的指令：
+```
+Poetry (version 2.1.2)
 
+Usage:
+command [options] [arguments]
+
+Options:
+-h, --help                 Display help for the given command. When no command is given display help for the list command.//显示给定命令的帮助。当没有给定命令时，显示列表命令的帮助。
+-q, --quiet                Do not output any message.//不要输出任何消息。
+-V, --version              Display this application version.//显示此应用程序的版本。
+--ansi                 Force ANSI output.//强制ANSI输出。
+--no-ansi              Disable ANSI output.//禁用ANSI输出。
+-n, --no-interaction       Do not ask any interactive question.//不要询问任何交互式问题。
+--no-plugins           Disables plugins.//禁用插件。
+--no-cache             Disables Poetry source caches.//禁用Poetry源缓存。
+-P, --project=PROJECT      Specify another path as the project root. All command-line arguments will be resolved relative to the current working directory.//指定另一个路径作为项目根。所有命令行参数将相对于当前工作目录解析。
+-C, --directory=DIRECTORY  The working directory for the Poetry command (defaults to the current working directory). All command-line arguments will be resolved relative to the given directory.//Poetry命令的工作目录（默认为当前工作目录）。所有命令行参数将相对于给定目录解析。
+-v|vv|vvv, --verbose       Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug.//增加消息的详细程度：1为正常输出，2为更详细的输出，3为调试。
+
+Available commands:
+about              Shows information about Poetry.//显示有关Poetry的信息。
+add                Adds a new dependency to pyproject.toml and installs it.//向pyproject.toml添加新的依赖项并安装它。
+build              Builds a package, as a tarball and a wheel by default.//默认情况下，构建一个包，作为tarball和wheel。
+check              Validates the content of the pyproject.toml file and its consistency with the poetry.lock file.//验证pyproject.toml文件的内容及其与poetry.lock文件的连贯性。
+config             Manages configuration settings.//管理配置设置。
+help               Displays help for a command.//显示命令的帮助。
+init               Creates a basic pyproject.toml file in the current directory.//在当前目录中创建一个基本的pyproject.toml文件。
+install            Installs the project dependencies.//安装项目依赖项。
+list               Lists commands.//列出命令。
+lock               Locks the project dependencies.//锁定项目依赖项。
+new                Creates a new Python project at <path>.//在<path>处创建一个新的Python项目。
+publish            Publishes a package to a remote repository.//将包发布到远程存储库。
+remove             Removes a package from the project dependencies.//从项目依赖项中删除一个包。
+run                Runs a command in the appropriate environment.//在适当的环境中运行命令。
+search             Searches for packages on remote repositories.//在远程存储库中搜索包。
+show               Shows information about packages.//显示有关包的信息。
+sync               Update the project's environment according to the lockfile.//根据锁文件更新项目的环境。
+update             Update the dependencies as according to the pyproject.toml file.//根据pyproject.toml文件更新依赖项。
+version            Shows the version of the project or bumps it when a valid bump rule is provided.//显示项目的版本或提供有效的增量规则时增加它。
+
+cache
+cache clear        Clears a Poetry cache by name.//按名称清除Poetry缓存。
+cache list         List Poetry's caches.//列出Poetry的缓存。
+
+debug
+debug info         Shows debug information.//显示调试信息。
+debug resolve      Debugs dependency resolution.//调试依赖项解析。
+debug tags         Shows compatible tags for your project's current active environment.//显示项目当前活动环境兼容的标签。
+
+env
+env activate       Print the command to activate a virtual environment.//打印激活虚拟环境的命令。
+env info           Displays information about the current environment.//显示当前环境的信息。
+env list           Lists all virtualenvs associated with the current project.//列出与当前项目关联的所有虚拟环境。
+env remove         Remove virtual environments associated with the project.//删除与项目关联的虚拟环境。
+env use            Activates or creates a new virtualenv for the current project.//为当前项目激活或创建一个新的虚拟环境。
+
+python
+python install     Install the specified Python version from the Python Standalone Builds project. (experimental feature)//从Python Standalone Builds项目安装指定的Python版本（实验性功能）。
+python list        Shows Python versions available for this environment. (experimental feature)//显示此环境中可用的Python版本（实验性功能）。
+python remove      Remove the specified Python version if managed by Poetry. (experimental feature)//如果由Poetry管理，则删除指定的Python版本（实验性功能）。
+
+self
+self add           Add additional packages to Poetry's runtime environment.//向Poetry的运行时环境添加其他包。
+self install       Install locked packages (incl. addons) required by this Poetry installation.//安装此Poetry安装所需的锁定包（包括附加组件）。
+self lock          Lock the Poetry installation's system requirements.//锁定Poetry安装的系统要求。
+self remove        Remove additional packages from Poetry's runtime environment.//从Poetry的运行时环境中删除其他包。
+self show          Show packages from Poetry's runtime environment.//显示Poetry的运行时环境中的包。
+self show plugins  Shows information about the currently installed plugins.//显示有关当前安装的插件的详细信息。
+self sync          Sync Poetry's own environment according to the locked packages (incl. addons) required by this Poetry installation.//根据此Poetry安装所需的锁定包（包括附加组件）同步Poetry自己的环境。
+self update        Updates Poetry to the latest version.//将Poetry更新到最新版本。
+
+source
+source add         Add source configuration for project.//为项目添加源配置。
+source remove      Remove source configured for the project.//删除为项目配置的源。
+source show        Show information about sources configured for the project.//显示为项目配置的源的信息。
+
+```
 
 
 
